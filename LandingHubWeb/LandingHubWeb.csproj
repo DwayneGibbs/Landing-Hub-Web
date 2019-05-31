@@ -1,0 +1,481 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5425ABE-2DD8-4A18-8EBE-9B5A3BFF65B6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LandingHubWeb</RootNamespace>
+    <AssemblyName>LandingHubWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cover.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Badges\Works_With_Fitbit_badge\Works_With_Fitbit_badge_horizontal_No_Reg.png" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Badges\Works_With_Fitbit_badge\Works_With_Fitbit_badge_square_No_Reg.png" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Badges\Works_With_Fitbit_Watches_badge\Works_With_Fitbit_Watches_badge_No_Reg.png" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C\Fitbit_logo_RGB.png" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C\Fitbit_logo_RGB.svg" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C_reversed\Fitbit_logo_reversed_RGB.png" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C_reversed\Fitbit_logo_reversed_RGB.svg" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fw__App_icons\Fitbit_app_icon.png" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fw__App_icons\Fitbit_app_icon_square.png" />
+    <Content Include="Images\FitbitLogosAndGuidelines\README.txt" />
+    <Content Include="Images\FitbitLogosAndGuidelines\__MACOSX\._README.txt" />
+    <Content Include="Images\GitHub-Logos\GitHub-Logos\GitHub_Logo.png" />
+    <Content Include="Images\GitHub-Logos\GitHub-Logos\GitHub_Logo_White.png" />
+    <Content Include="Images\GitHub-Logos\GitHub-Logos\README.txt" />
+    <Content Include="Images\GitHub-Mark\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" />
+    <Content Include="Images\GitHub-Mark\GitHub-Mark\PNG\GitHub-Mark-32px.png" />
+    <Content Include="Images\GitHub-Mark\GitHub-Mark\PNG\GitHub-Mark-64px.png" />
+    <Content Include="Images\GitHub-Mark\GitHub-Mark\PNG\GitHub-Mark-Light-120px-plus.png" />
+    <Content Include="Images\GitHub-Mark\GitHub-Mark\PNG\GitHub-Mark-Light-32px.png" />
+    <Content Include="Images\GitHub-Mark\GitHub-Mark\PNG\GitHub-Mark-Light-64px.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-128-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-128-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-128.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-14-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-14-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-14.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-21-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-21-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-21.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-26-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-26-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-26.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-34-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-34-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-34.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-40-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-40-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-40.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-48-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-48-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-48.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-72-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-72-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-72.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-96-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-96-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\In-Blue-96.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-128%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-128-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-128-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-14%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-14-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-14-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-21%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-21-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-21-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-26%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-26-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-26-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-34%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-34-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-34-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-40%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-40-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-40-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-48%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-48-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-48-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-72%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-72-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-72-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-96%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-96-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\In-Blue-96-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-128-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-128-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-128.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-14-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-14-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-14.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-21-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-21-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-21.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-26-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-26-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-26.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-34-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-34-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-34.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-40-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-40-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-40.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-48-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-48-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-48.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-72-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-72-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-72.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-96-Γö¼┬½.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-96-╬ô├ñ├│.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\In-White-96.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-128%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-128-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-128-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-14%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-14-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-14-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-21%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-21-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-21-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-26%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-26-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-26-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-34%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-34-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-34-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-40%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-40-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-40-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-48%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-48-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-48-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-72%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-72-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-72-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-96%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-96-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\In-White-96-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-128%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-128-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-128-╬ô├ñ├│%402x.png_Error.txt" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-14%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-14-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-14-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-21%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-21-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-21-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-26%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-26-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-34%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-34-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-34-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-40%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-40-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-40-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-48-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-48-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-72-Γö¼┬½%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-72-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-96%402x.png" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\LinkedIn-Blue-96-╬ô├ñ├│%402x.png" />
+    <Content Include="Images\Octocats\Octocat\Octocat.jpg" />
+    <Content Include="Images\Octocats\Octocat\Octocat.png" />
+    <Content Include="Images\Stackoverflow\so-icon.png" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Images\GitHub-Logos\GitHub-Logos\.DS_Store" />
+    <Content Include="Images\GitHub-Logos\GitHub-Logos\GitHub_Logo.ai" />
+    <Content Include="Images\GitHub-Logos\GitHub-Logos\GitHub_Logo.eps" />
+    <Content Include="Images\GitHub-Logos\GitHub-Logos\GitHub_Logo.psd" />
+    <Content Include="Images\GitHub-Logos\GitHub-Logos\GitHub_Logo_White.psd" />
+    <Content Include="Images\GitHub-Mark\GitHub-Mark\.DS_Store" />
+    <Content Include="Images\GitHub-Mark\GitHub-Mark\Vector\GitHub-Mark.ai" />
+    <Content Include="Images\GitHub-Mark\GitHub-Mark\Vector\GitHub-Mark.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\1x\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\Blue\2x\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\1x\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Digital\White\2x\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\Blue\In-CMYK-Blue-L-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\Blue\In-CMYK-Blue-L-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\Blue\In-CMYK-Blue-L.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\Blue\In-CMYK-Blue-M-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\Blue\In-CMYK-Blue-M-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\Blue\In-CMYK-Blue-M.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\Blue\In-CMYK-Blue-S-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\Blue\In-CMYK-Blue-S-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\Blue\In-CMYK-Blue-S.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\White\In-CMYK-White-L-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\White\In-CMYK-White-L-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\White\In-CMYK-White-L.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\White\In-CMYK-White-M-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\White\In-CMYK-White-M-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\White\In-CMYK-White-M.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\White\In-CMYK-White-S-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\White\In-CMYK-White-S-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\CMYK\White\In-CMYK-White-S.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\PMS\In-PMS2174U-L-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\PMS\In-PMS2174U-L-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\PMS\In-PMS2174U-L.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\PMS\In-PMS2174U-M-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\PMS\In-PMS2174U-M-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\PMS\In-PMS2174U-M.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\PMS\In-PMS2174U-S-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\PMS\In-PMS2174U-S-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\In\Print\PMS\In-PMS2174U-S.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Digital\Blue\2x\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\Blue\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\Blue\LinkedIn-CMYK-Blue-L-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\Blue\LinkedIn-CMYK-Blue-L-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\Blue\LinkedIn-CMYK-Blue-L.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\Blue\LinkedIn-CMYK-Blue-M-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\Blue\LinkedIn-CMYK-Blue-M-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\Blue\LinkedIn-CMYK-Blue-M.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\Blue\LinkedIn-CMYK-Blue-S-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\Blue\LinkedIn-CMYK-Blue-S-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\Blue\LinkedIn-CMYK-Blue-S.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\White\.DS_Store" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\White\LinkedIn-CMYK-White-L-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\White\LinkedIn-CMYK-White-L-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\White\LinkedIn-CMYK-White-L.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\White\LinkedIn-CMYK-White-M-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\White\LinkedIn-CMYK-White-M-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\White\LinkedIn-CMYK-White-M.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\White\LinkedIn-CMYK-White-S-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\White\LinkedIn-CMYK-White-S-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\CMYK\White\LinkedIn-CMYK-White-S.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\PMS\LinkedIn-PMS2174U-L-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\PMS\LinkedIn-PMS2174U-L-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\PMS\LinkedIn-PMS2174U-L.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\PMS\LinkedIn-PMS2174U-M-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\PMS\LinkedIn-PMS2174U-M.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\PMS\LinkedIn-PMS2174U-S-Γö¼┬½.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\PMS\LinkedIn-PMS2174U-S-╬ô├ñ├│.eps" />
+    <Content Include="Images\linkedin-logos\LinkedIn-Logos\Logo\Print\PMS\LinkedIn-PMS2174U-S.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\2016_Fitbit_Brand_Guidelines_v25.pdf" />
+    <Content Include="Images\FitbitLogosAndGuidelines\2019_Fitbit_API_Brand_Guidelines_V10.pdf" />
+    <Content Include="Images\FitbitLogosAndGuidelines\2019_Fitbit_SDK_Brand_Guidelines_V10.pdf" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Badges\.DS_Store" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Badges\Works_With_Fitbit_badge\Works_With_Fitbit_badge_horizontal_CMYK_No_Reg.ai" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Badges\Works_With_Fitbit_badge\Works_With_Fitbit_badge_horizontal_CMYK_No_Reg.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Badges\Works_With_Fitbit_badge\Works_With_Fitbit_badge_square_CMYK_No_Reg.ai" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Badges\Works_With_Fitbit_badge\Works_With_Fitbit_badge_square_CMYK_No_Reg.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Badges\Works_With_Fitbit_Watches_badge\Works_With_Fitbit_Watches_badge_CMYK_No_Reg.ai" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Badges\Works_With_Fitbit_Watches_badge\Works_With_Fitbit_Watches_badge_CMYK_No_Reg.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C\Fitbit_logo_CMYK.ai" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C\Fitbit_logo_CMYK.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C\Fitbit_logo_PMS.ai" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C\Fitbit_logo_PMS.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C\Fitbit_logo_RGB.ai" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C\Fitbit_logo_RGB.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C_reversed\Fitbit_logo_reversed_CMYK.ai" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C_reversed\Fitbit_logo_reversed_CMYK.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C_reversed\Fitbit_logo_reversed_PMS.ai" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C_reversed\Fitbit_logo_reversed_PMS.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C_reversed\Fitbit_logo_reversed_RGB.ai" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fitbit_logo_2C_reversed\Fitbit_logo_reversed_RGB.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fw__App_icons\Fitbit_app_icon.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\Fw__App_icons\Fitbit_app_icon_square.eps" />
+    <Content Include="Images\FitbitLogosAndGuidelines\__MACOSX\Badges\._.DS_Store" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\LandingHubController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\StringToMD5.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\LandingHub\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51401</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49541/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
