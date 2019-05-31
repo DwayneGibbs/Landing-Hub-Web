@@ -1,2 +1,2 @@
 # Landing-Hub-Web
-The website files for my Landing Hub personal website
+This application is used as the Landing Hub for vistors to my domain.
