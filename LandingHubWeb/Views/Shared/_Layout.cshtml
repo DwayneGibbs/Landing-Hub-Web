@@ -15,11 +15,11 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
             <div class="inner">
-                <h3 class="masthead-brand">Cover</h3>
+                <h3 class="masthead-brand">Dwayne Gibbs</h3>
                 <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href='@Url.Action("Index", "LandingHub")'>Home</a>
-                    <a class="nav-link" href='@Url.Action("Index", "Projects")'>Projects</a>
-                    <a class="nav-link" href='@Url.Action("Index", "Contact")'>Contact</a>
+                    <a class="nav-link @ViewBag.IsHomeActive" href='@Url.Action("Index", "LandingHub")'>Home</a>
+                    <a class="nav-link @ViewBag.IsProjectsActive" href='@Url.Action("Index", "Projects")'>Projects</a>
+                    <a class="nav-link @ViewBag.IsContactActive" href='@Url.Action("Index", "Contact")'>Contact</a>
                 </nav>
             </div>
         </header>
@@ -36,5 +36,8 @@
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     @*<script src="~/Scripts/popper.min.js"></script>*@
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        
+    </script>
 </body>
 </html>

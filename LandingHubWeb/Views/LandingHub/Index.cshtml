@@ -2,16 +2,34 @@
 @{
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
+        
+    ViewBag.IsHomeActive = "active";
+    ViewBag.IsProjectsActive = "";
+    ViewBag.IsContactActive = "";
 }
 
     <main role="main" class="inner cover">
-        <img src="@ViewBag.GravatarHashedEmail" class="rounded mx-auto d-block" alt="...">
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-        <p class="lead">
-            <img src="~/Images/GitHub-Mark/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png" />
-            <img src="~/Images/linkedin-logos/LinkedIn-Logos/In/Digital/White/2x/In-White-34@2x.png" />
-            <img  style="width:84px;" src="~/Images/Stackoverflow/so-icon.png" />
-            <img class="" style="width:64px;" src="~/Images/FitbitLogosAndGuidelines/Fw__App_icons/Fitbit_app_icon.png" />
+        <img style="padding-top: 30px;" src="@ViewBag.GravatarHashedEmail" class="rounded mx-auto d-block" alt="...">
+        <br />
+        <p class="lead">Welcome to my Landing Hub. <br/>Here you'll be able to spoke out to various interests of mine. Enjoy and remember:</p>
+        <p class="lead"><b>I don't code to code, <br/> 
+                I code to communicate <br />
+                while keeping Jesus <br/> 
+                at the center of my life</b>
         </p>
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="img-fluid" style="padding-bottom: 10px;" src="~/Images/GitHub-Mark/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png" />
+            </div>
+            <div class="col-sm-3">
+                <img class="img-fluid" style="padding-top:10px;" src="~/Images/linkedin-logos/LinkedIn-Logos/In/Digital/White/2x/In-White-34@2x.png" />
+            </div>
+            <div class="col-sm-3">
+                <img class="img-fluid" style="width:84px;" src="~/Images/Stackoverflow/so-icon.png" />
+            </div>
+            <div class="col-sm-3">
+                <img class="img-fluid" style="width:64px;" src="~/Images/FitbitLogosAndGuidelines/Fw__App_icons/Fitbit_app_icon.png" />
+            </div>
+        </div>
     </main>
 
